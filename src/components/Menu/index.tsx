@@ -25,7 +25,12 @@ const Menu: React.FC<IMenu> = ({ isOpen }) => {
         </S.MenuItem>
         <S.MenuItem data-menuanchor="aboutme">
           <Link href="#aboutme">
-            <span>About me</span>
+            <span>Sobre mim</span>
+          </Link>
+        </S.MenuItem>
+        <S.MenuItem data-menuanchor="experience">
+          <Link href="#experience">
+            <span>Experiência</span>
           </Link>
         </S.MenuItem>
       </S.ContainerMenuItems>

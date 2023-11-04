@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
+export const Container = styled.main`
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 `;
 
 export const WrapperPage = styled.main`
@@ -20,6 +22,7 @@ export const WrapperPage = styled.main`
 export const WrapperContent = styled.section`
   height: 100%;
   width: 100%;
+  padding: 5rem 7rem;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import * as S from "./styles";
 import { Col, Row } from "@/styles";
 import AboutMe from "@/components/Layout/AboutMe";
+import IAm from "@/components/Layout/Home";
+import Experience from "@/components/Layout/Experience";
 
 export default function Home() {
   const [textProfession, setTextProfession] = useState("De");
@@ -29,37 +31,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      style={{
-        height: "100%",
-        overflowY: "scroll",
-        scrollBehavior: "smooth",
-      }}
-    >
+    <S.Container>
       <S.WrapperContent id="home">
-        <Row>
-          <Col gap="0.8rem" pd="0 3rem" wd="80%">
-            <h3>Olá, eu sou</h3>
-            <h1>Vinícius Silva</h1>
-            <h2>
-              {textProfession}
-              <span>|</span>
-            </h2>
-
-            <h3>
-              Sou desenvolvedor de software, com conhecimento aprofundado em
-              front-end.
-              <br />
-              Entreguei soluções com diversas atuações em: criação de novos
-              projetos, migração de tecnologia, mudança de arquitetura para
-              Micro-Frontends, atuação em projetos paralelos de forma autônoma.
-            </h3>
-          </Col>
-        </Row>
+        <IAm textProfession={textProfession} />
       </S.WrapperContent>
       <S.WrapperContent id="aboutme">
         <AboutMe />
       </S.WrapperContent>
-    </div>
+      <S.WrapperContent id="experience">
+        <Experience />
+      </S.WrapperContent>
+    </S.Container>
   );
 }

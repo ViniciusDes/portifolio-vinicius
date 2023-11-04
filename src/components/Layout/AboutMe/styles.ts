@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 5rem 3rem;
+  /* padding: 5rem 7rem; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -68,17 +68,21 @@ export const Title = styled.h3`
 export const TextAboutMe = styled.h2`
   color: #fff;
   font-family: var(--font-rubik-700);
-  margin-top: 2rem !important;
   font-size: 2rem;
 `;
 
 export const TextDetailAboutMe = styled.h3`
   color: #fff;
-  /* font-family: var(--font-rubik-700); */
-  margin-top: 1rem;
   font-size: 1.1rem;
 
   span {
     font-family: var(--font-rubik-500);
   }
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 1s;
+
+  opacity: 1;
+  visibility: visible;
 `;
