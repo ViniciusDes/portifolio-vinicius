@@ -11,11 +11,11 @@ const Slide: React.FC = () => {
   return (
     <S.Container>
       <S.SliderList>
-        <li gap="10px" jContent="center">
+        <li>
           <Icon icon="devicon:javascript" width="60" />
           <p>JavaScript</p>
         </li>
-        <li gap="10px">
+        <li>
           <Icon icon="devicon:typescript" width="60" />
           <p>Typescript</p>
         </li>
@@ -39,11 +39,11 @@ const Slide: React.FC = () => {
           <Icon icon="devicon:materialui" width="60" />
           <p>Material UI</p>
         </li>
-        <li gap="10px" jContent="center">
+        <li>
           <Icon icon="devicon:javascript" width="60" />
           <p>JavaScript</p>
         </li>
-        <li gap="10px">
+        <li>
           <Icon icon="devicon:typescript" width="60" />
           <p>Typescript</p>
         </li>
@@ -67,11 +67,11 @@ const Slide: React.FC = () => {
           <Icon icon="devicon:materialui" width="60" />
           <p>Material UI</p>
         </li>
-        <li gap="10px" jContent="center">
+        <li>
           <Icon icon="devicon:javascript" width="60" />
           <p>JavaScript</p>
         </li>
-        <li gap="10px">
+        <li>
           <Icon icon="devicon:typescript" width="60" />
           <p>Typescript</p>
         </li>

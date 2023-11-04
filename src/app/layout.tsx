@@ -37,10 +37,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ({ children }: { children: React.ReactNode }) => {
+export default function Root({ children }: { children: React.ReactNode }) {
   return (
     <HeaderProvider>
-      <RootLayout children={children} />
+      <RootLayout>{children}</RootLayout>
     </HeaderProvider>
   );
-};
+}
