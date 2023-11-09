@@ -69,6 +69,7 @@ export const WrapperExperience = styled.section`
   position: relative;
 
   @media screen and (max-width: 720px) {
+    align-items: start;
     flex-direction: column;
   }
 
@@ -114,14 +115,17 @@ export const WrapperLogoCompany = styled.div`
   width: 13rem;
   margin-top: -20px;
 
-  h2 {
-    font-size: 0.9rem;
-
-    @media screen and (max-width: 720px) {
+  @media screen and (max-width: 720px) {
+    padding: 0;
+    align-items: start;
+    h2 {
       width: max-content;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin: 1rem 0;
     }
+  }
+  h2 {
+    font-size: 0.9rem;
   }
 
   &:after {
