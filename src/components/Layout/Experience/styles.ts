@@ -62,6 +62,7 @@ export const WrapperExperience = styled.section`
   padding: 1.5rem;
 
   display: flex;
+  align-items: center;
   gap: 1rem;
 
   display: flex;
@@ -90,6 +91,7 @@ export const DescriptionExperience = styled.h3`
 export const TimeWorks = styled.div`
   position: absolute;
   right: 1.5rem;
+  top: 1.5rem;
 
   padding: 5px;
   font-size: 0.9rem;
@@ -106,6 +108,13 @@ export const WrapperLogoCompany = styled.div`
   justify-content: space-evenly;
   position: relative;
   padding: 0 1rem;
+  height: max-content;
+  width: 13rem;
+  margin-top: -20px;
+
+  h2 {
+    font-size: 0.9rem;
+  }
 
   &:after {
     content: " ";

@@ -22,20 +22,21 @@ export const WrapperPage = styled.main`
 export const WrapperContent = styled.section`
   height: 100%;
   width: 100%;
-  padding: 5rem 7rem;
+  max-width: 1366px;
+  padding: 5rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
 
+  @media screen and (max-width: 1440px) {
+    padding: 5rem 2rem;
+  }
+
   h2 {
     margin: 0;
     font-family: var(--font-rubik-500);
-  }
-  h1,
-  h2,
-  h3 {
-    /* margin: 0; */
   }
 
   h1 {
