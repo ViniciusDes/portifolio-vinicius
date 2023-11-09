@@ -28,13 +28,15 @@ const AboutMe: React.FC = () => {
           deploy e implantação de software (CI).
         </S.TextDetailAboutMe>
 
-        <h3>
+        <h3 className="complement-about-me">
           Sou uma pessoa volátil que ama resolver problemas, estou sempre em
           busca de conhecimento e prática para aprimorar meus conhecimentos e
           habilidades, em contra-partida entregar excelente soluções.
         </h3>
 
-        <h3>Fora dos códigos, amo esportes, cuidar da minha saúde e viajar.</h3>
+        <h3 className="complement-about-me">
+          Fora dos códigos, amo esportes, cuidar da minha saúde e viajar.
+        </h3>
       </Col>
     </S.Container>
   );

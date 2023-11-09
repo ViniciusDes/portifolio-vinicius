@@ -17,6 +17,12 @@ export const Container = styled.div`
     }
   }
 
+  h3.complement-about-me {
+    @media screen and (max-width: 720px) {
+      font-size: 0.9rem;
+    }
+  }
+
   .container-slider {
     width: 200vw;
     overflow-x: scroll;
@@ -69,6 +75,10 @@ export const TextAboutMe = styled.h2`
   color: #fff;
   font-family: var(--font-rubik-700);
   font-size: 2rem;
+
+  @media screen and (max-width: 720px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const TextDetailAboutMe = styled.h3`
@@ -85,4 +95,8 @@ export const TextDetailAboutMe = styled.h3`
 
   opacity: 1;
   visibility: visible;
+
+  @media screen and (max-width: 720px) {
+    font-size: 0.9rem;
+  }
 `;
