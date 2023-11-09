@@ -68,15 +68,17 @@ export const WrapperExperience = styled.section`
   display: flex;
   position: relative;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+
   img {
     width: 7rem;
     height: fit-content;
   }
 `;
 
-export const TitleExperience = styled.h2`
-  /* font-weight: var(--font-rubik-700); */
-`;
+export const TitleExperience = styled.h2``;
 
 export const PeriodExperience = styled.h3`
   font-weight: var(--font-rubik-300);
@@ -114,6 +116,12 @@ export const WrapperLogoCompany = styled.div`
 
   h2 {
     font-size: 0.9rem;
+
+    @media screen and (max-width: 720px) {
+      width: max-content;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
   }
 
   &:after {

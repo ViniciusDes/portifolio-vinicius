@@ -1,7 +1,11 @@
 import { Col } from "@/styles";
 import * as S from "./styles";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
+
 export default function Experience() {
+  const { width: widthScreen } = useWindowDimensions();
+
   return (
     <S.Container>
       <S.Title>Experiência</S.Title>
@@ -9,7 +13,9 @@ export default function Experience() {
       <S.WrapperContent>
         <S.WrapperExperience>
           <S.WrapperLogoCompany>
-            <Icon icon="material-symbols:work" fontSize={100} />
+            {widthScreen > 720 && (
+              <Icon icon="material-symbols:work" fontSize={100} />
+            )}
             <h2>Saibweb Tecnologia</h2>
           </S.WrapperLogoCompany>
           <Col gap="0.5rem">
@@ -40,7 +46,9 @@ export default function Experience() {
 
         <S.WrapperExperience>
           <S.WrapperLogoCompany>
-            <Icon icon="material-symbols:work" fontSize={100} />
+            {widthScreen > 720 && (
+              <Icon icon="material-symbols:work" fontSize={100} />
+            )}
             <h2>Leadup</h2>
           </S.WrapperLogoCompany>
           <Col gap="0.5rem">
@@ -67,7 +75,9 @@ export default function Experience() {
 
         <S.WrapperExperience>
           <S.WrapperLogoCompany>
-            <Icon icon="material-symbols:work" fontSize={100} />
+            {widthScreen > 720 && (
+              <Icon icon="material-symbols:work" fontSize={100} />
+            )}
             <h2>Freelancer </h2>
           </S.WrapperLogoCompany>
           <Col gap="0.5rem">
