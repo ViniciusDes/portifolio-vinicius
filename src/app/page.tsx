@@ -39,7 +39,7 @@ export default function Home() {
         <AboutMe />
       </S.WrapperContent>
       <S.WrapperContent id="experience">
-        <Experience />
+        {typeof window !== "undefined" && <Experience />}
       </S.WrapperContent>
     </S.Container>
   );
