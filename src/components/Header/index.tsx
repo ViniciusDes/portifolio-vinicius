@@ -7,15 +7,9 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 const Header: React.FC = () => {
   const { setIsOpenMenu, isOpenMenu } = useHeader();
 
-  if (typeof window == "undefined") return <div />;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { width } = useWindowDimensions();
-
-  if (width >= 1200) {
-    return <div />;
-  }
   return (
-    <S.Container>
+    <S.Container visible={width <= 1200 ? "true" : "false"}>
       <h2>Vinícius</h2>
 
       <button onClick={() => setIsOpenMenu(!isOpenMenu)}>

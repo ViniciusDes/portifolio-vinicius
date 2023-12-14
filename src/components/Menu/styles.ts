@@ -70,6 +70,7 @@ export const ContainerMenuItems = styled.ul`
 `;
 
 export const MenuItem = styled.li`
+  padding: 5px 0;
   a {
     margin: 0;
     padding: 12px 30px;

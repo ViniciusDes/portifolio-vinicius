@@ -5,6 +5,7 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function Experience() {
   const { width: widthScreen } = useWindowDimensions();
+  // const widthScreen = 1200;
 
   return (
     <S.Container>

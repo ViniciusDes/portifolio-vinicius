@@ -1,11 +1,10 @@
-"use client";
+// "use client";
 import { useState, useEffect } from "react";
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
   return {
-    width,
-    height,
+    width: window?.innerWidth,
+    height: window?.innerHeight,
   };
 }
 
@@ -19,8 +18,10 @@ export default function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window != "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return windowDimensions;

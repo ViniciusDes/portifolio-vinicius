@@ -17,6 +17,9 @@ export const Container = styled.div`
     }
   }
 
+  h3 {
+    line-height: 1.5rem;
+  }
   h3.complement-about-me {
     @media screen and (max-width: 720px) {
       font-size: 0.9rem;

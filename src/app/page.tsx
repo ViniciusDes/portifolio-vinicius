@@ -5,6 +5,7 @@ import { Col, Row } from "@/styles";
 import AboutMe from "@/components/Layout/AboutMe";
 import IAm from "@/components/Layout/Home";
 import Experience from "@/components/Layout/Experience";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const [textProfession, setTextProfession] = useState("De");
@@ -39,7 +40,7 @@ export default function Home() {
         <AboutMe />
       </S.WrapperContent>
       <S.WrapperContent id="experience">
-        {typeof window !== "undefined" ? <Experience /> : <div />}
+        <Experience />
       </S.WrapperContent>
     </S.Container>
   );

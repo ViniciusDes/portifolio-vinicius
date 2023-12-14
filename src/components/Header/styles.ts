@@ -1,11 +1,15 @@
 import { theme } from "@/styles/theme";
 import styled from "styled-components";
 
-export const Container = styled.header`
+interface IContainerProps {
+  visible: string;
+}
+export const Container = styled.header<IContainerProps>`
   width: 100vw;
   height: 4rem;
   padding: 10px 5px;
   background: ${theme.colors.blue_600};
+  display: ${({ visible }) => (visible === "true" ? "block" : "none")};
 
   display: flex;
   justify-content: space-between;
