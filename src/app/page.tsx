@@ -1,11 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import * as S from "./styles";
-import { Col, Row } from "@/styles";
 import AboutMe from "@/components/Layout/AboutMe";
 import IAm from "@/components/Layout/Home";
 import Experience from "@/components/Layout/Experience";
-import dynamic from "next/dynamic";
 
 export default function Home() {
   const [textProfession, setTextProfession] = useState("De");

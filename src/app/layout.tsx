@@ -31,6 +31,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
   useEffect(() => {
+    if (typeof window == "undefined") return;
     const params = {
       TableName: "USER_ACCESS",
       Item: {
