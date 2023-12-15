@@ -30,19 +30,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
   const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
-  const params = {
-    TableName: "USER_ACCESS",
-    Item: {
-      ID: Math.random(), // substitua com o valor real
-      TIME_ACESS: new Date().toString(),
-      LANGUAGE: window.navigator.language,
-      PLATFORM: window.navigator.platform ?? "",
-      BROWSER_VERSION: window.navigator.appVersion,
-      LOCATION_DATA: "",
-    },
-  };
-
   useEffect(() => {
+    const params = {
+      TableName: "USER_ACCESS",
+      Item: {
+        ID: Math.random(), // substitua com o valor real
+        TIME_ACESS: new Date().toString(),
+        LANGUAGE: window.navigator.language,
+        PLATFORM: window.navigator.platform ?? "",
+        BROWSER_VERSION: window.navigator.appVersion,
+        LOCATION_DATA: "",
+      },
+    };
     console.log("try it");
     const setUserDataAccess = async () => {
       const request = await fetch(
