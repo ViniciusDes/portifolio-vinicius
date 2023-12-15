@@ -43,6 +43,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
+    console.log("try it");
     const setUserDataAccess = async () => {
       const request = await fetch(
         "https://ipinfo.io/json?token=f9b20befc2066a"
