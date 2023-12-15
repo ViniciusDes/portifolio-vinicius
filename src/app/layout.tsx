@@ -34,18 +34,31 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     TableName: "USER_ACCESS",
     Item: {
       ID: Math.random(), // substitua com o valor real
-      hora: new Date().toString(),
+      TIME_ACESS: new Date().toString(),
+      LANGUAGE: window.navigator.language,
+      PLATFORM: window.navigator.platform ?? "",
+      BROWSER_VERSION: window.navigator.appVersion,
+      LOCATION_DATA: "",
     },
   };
 
   useEffect(() => {
-    dynamoDB.put(params, (err, data) => {
-      if (err) {
-        console.error("Erro ao enviar dados para o DynamoDB", err);
-      } else {
-        console.log("Dados enviados com sucesso para o DynamoDB", data);
-      }
-    });
+    const setUserDataAccess = async () => {
+      const request = await fetch(
+        "https://ipinfo.io/json?token=f9b20befc2066a"
+      );
+      const jsonResponse = await request.json();
+      params.Item.LOCATION_DATA = JSON.stringify(jsonResponse);
+      console.log(window);
+      dynamoDB.put(params, (err, data) => {
+        if (err) {
+          console.error("Erro ao enviar dados para o DynamoDB", err);
+        } else {
+          console.log("Dados enviados com sucesso para o DynamoDB", data);
+        }
+      });
+    };
+    setUserDataAccess();
   }, []);
 
   return (
