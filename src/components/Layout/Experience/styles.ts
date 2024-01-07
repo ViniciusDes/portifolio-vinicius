@@ -91,11 +91,12 @@ export const DescriptionExperience = styled.h3`
   font-size: 0.9rem;
 `;
 
-export const TimeWorks = styled.div`
-  position: absolute;
+export const TimeWorks = styled.div<{ show: boolean }>`
+  /* position: absolute;
   right: 1.5rem;
-  top: 1.5rem;
+  top: 1.5rem; */
 
+  display: ${({ show }) => (show ? "block" : "none")};
   padding: 5px;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -126,6 +127,7 @@ export const WrapperLogoCompany = styled.div`
   }
   h2 {
     font-size: 0.9rem;
+    color: ${theme.colors.green_primary};
   }
 
   &:after {

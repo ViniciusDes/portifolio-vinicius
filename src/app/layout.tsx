@@ -17,7 +17,6 @@ import { useEffect } from "react";
 // };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  const { isOpenMenu } = useHeader();
   const region = process.env.NEXT_PUBLIC_AWS_REGION;
   const accessKeyId = process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID;
   const secretAccessKey = process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY;
@@ -43,7 +42,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         LOCATION_DATA: "",
       },
     };
-    console.log("try it");
+
     const setUserDataAccess = async () => {
       const request = await fetch(
         "https://ipinfo.io/json?token=f9b20befc2066a"
@@ -72,7 +71,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <StyledComponentsRegistry>
             <GlobalStyle whiteColor />
             <Header />
-            <Menu isOpen={isOpenMenu} />
+            <Menu />
 
             <S.WrapperPage>{children}</S.WrapperPage>
           </StyledComponentsRegistry>

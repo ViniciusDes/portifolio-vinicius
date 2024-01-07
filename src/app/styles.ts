@@ -20,7 +20,7 @@ export const WrapperPage = styled.main`
 `;
 
 export const WrapperContent = styled.section`
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   max-width: 1366px;
   padding: 5rem;
@@ -32,6 +32,10 @@ export const WrapperContent = styled.section`
 
   @media screen and (max-width: 1440px) {
     padding: 5rem 2rem;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 2rem 1rem;
   }
 
   h2 {

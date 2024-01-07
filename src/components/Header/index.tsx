@@ -6,13 +6,17 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const Header: React.FC = () => {
   const { setIsOpenMenu, isOpenMenu } = useHeader();
-
   const { width } = useWindowDimensions();
   return (
     <S.Container visible={width <= 1200 ? "true" : "false"}>
       <h2>Vinícius</h2>
 
-      <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
+      <button
+        onClick={() => setIsOpenMenu(!isOpenMenu)}
+        style={{
+          display: width > 1200 ? "none" : "block",
+        }}
+      >
         <span />
         <span />
         <span />

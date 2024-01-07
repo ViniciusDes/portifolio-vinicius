@@ -3,13 +3,13 @@ import Logo from "@/assets/logo-professional.jpeg";
 import * as S from "./styles";
 import Image from "next/image";
 import Link from "next/link";
+import { useHeader } from "@/hooks/useHeader";
 
-interface IMenu {
-  isOpen?: boolean;
-}
-const Menu: React.FC<IMenu> = ({ isOpen }) => {
+const Menu: React.FC = () => {
+  const { isOpenMenu } = useHeader();
+  console.log("isOpenMenu", isOpenMenu);
   return (
-    <S.Container isOpen={isOpen}>
+    <S.Container isOpen={isOpenMenu}>
       <S.ContainerLogo>
         <S.WrapperLogo>
           <Image src={Logo} alt="logo" />
